@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 
-img =cv2.imread('..\Photos/park.jpg')
+#img =cv2.imread('..\Photos/park.jpg')
 
-cv2.imshow('Park',img)
+#cv2.imshow('Park',img)
 
 #translation
 def translate(img,x,y):
@@ -15,8 +15,8 @@ def translate(img,x,y):
     return cv2.warpAffine(img,transMat,dimensions)
 
 
-translated = translate(img,100,100)
-cv2.imshow('translated',translated)
+#translated = translate(img,100,100)
+#cv2.imshow('translated',translated)
 
 #Rotation
 def rotate(img, angle, rotPoint=None):
@@ -30,12 +30,12 @@ def rotate(img, angle, rotPoint=None):
 
     return cv2.warpAffine(img,rotMat,dimensions)
 
-rotated= rotate(img,-45)
-cv2.imshow('Rotate',rotated)
+#rotated= rotate(img,-45)
+#cv2.imshow('Rotate',rotated)
 
 
 #flipping
-flip=cv2.flip(img,-1)
+#flip=cv2.flip(img,-1)
 #-1 flips vertically and horizonatally 
 
 '''
@@ -48,6 +48,6 @@ flip=cv2.flip(img,-1)
 '''
 
 #cropping 
-cropped = img[200:400,200:400]
+#cropped = img[200:400,200:400]
 
 cv2.waitKey(0)
